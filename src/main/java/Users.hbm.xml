@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>   
+<!-- <!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  -->
+
+<!DOCTYPE hibernate-mapping PUBLIC   
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">   
+
+  <hibernate-mapping>
+     <class name="com.ek.Users" table="users">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="id" type="int" column="ID">
+      
+      <generator class="increment"></generator>   
+      
+         
+      </id>
+      
+      <property name="userId" column="USER_ID" type="string"/>
+      <property name="password" column="PASSWORD" type="string"/>
+      <property name="name" column="FIRST_NAME" type="string"/>
+      <property name="surname" column="LAST_NAME" type="string"/>
+      <property name="add" column="ADDRESS" type="string"/>
+      <property name="city" column="CITY" type="string"/>
+      <property name="country" column="COUNTRY" type="string"/>
+   </class>
+</hibernate-mapping>
